@@ -8,6 +8,8 @@
         <link rel="stylesheet" media="screen and (max-width: 1023px)" href="index.css">
         <!-- <link rel="stylesheet" media="screen and (max-width: 767px) and (max-width: 1023px)" href="resources/css/style2.css"> -->
         <link rel="stylesheet" media="screen and (min-width: 1024px)" href="/index2.css">
+        <script id="desktop-script" src=""></script>
+        <script id="mobile-script" src=""></script>
     </head>
 
     <body>
@@ -66,6 +68,21 @@
 
         </div>
 
-        <script src="/index.js"></script>
+        <script>
+            function loadScript() {
+                let scriptElement = document.createElement("script");
+                scriptElement.setAttribute("type", "text/javascript");
+
+                if (window.innerWidth > 1023) {
+                    scriptElement.setAttribute("src", "/desktop-script.js");
+                    document.getElementById("desktop-script").appendChild(scriptElement);
+                } else {
+                    scriptElement.setAttribute("src", "/mobile-script.js");
+                    document.getElementById("mobile-script").appendChild(scriptElement);
+                }
+            }
+            window.addEventListener("load", loadScript);
+            window.addEventListener("resize", loadScript);
+        </script>
     </body>
 </html>

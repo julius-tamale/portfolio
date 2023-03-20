@@ -5,9 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Julius Tamale | Front-end Web Developer</title>
-        <link rel="stylesheet" media="screen and (max-width: 1023px)" href="index.css">
-        <!-- <link rel="stylesheet" media="screen and (max-width: 767px) and (max-width: 1023px)" href="resources/css/style2.css"> -->
-        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="index2.css">
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="index.css">
+        <link rel="stylesheet" media="screen and (min-width: 767px)" href="index2.css">
+        <script id="desktop-script" src=""></script>
+        <script id="mobile-script" src=""></script>
+
     </head>
 
     <body>
@@ -15,7 +17,7 @@
 
             <header class="navbar">
                 <div class="menu">
-                    <h1 class="logo">Jewlius<span>Codes</span></h1>
+                    <h1 class="logo"><a href="index.html">Jewlius<span>Codes</a></span></h1>
                     <div class="hamburger-menu">
                         <div class="bar"></div>
                     </div>
@@ -46,19 +48,19 @@
     
             <nav class="links">
                 <ul>
-                    <li class="active">
+                    <li class="active nav-link">
                         <a href="index.html" style="--i: 0.05s">Home</a>
                     </li>
-                    <li>
+                    <li class="nav-link">
                         <a href="resources/site-pages/about-me.html" style="--i: 0.1s">About</a>
                     </li>
-                    <li>
+                    <li class="nav-link">
                         <a href="resources/site-pages/contact-me.html" style="--i: 0.15s">Contact</a>
                     </li>
-                    <li>
+                    <li class="nav-link">
                         <a href="resources/site-pages/portfolio.html" style="--i: 0.25s">Portfolio</a>
                     </li>
-                    <li>
+                    <li class="nav-link">
                         <a href="resources/site-pages/my-blog.html" style="--i: 0.25s">Blog</a>
                     </li>
                 </ul>
@@ -66,6 +68,29 @@
 
         </div>
 
+
+
+
+
+
+        <!-- <script>
+            function loadScript() {
+                let scriptElement = document.createElement("script");
+                scriptElement.setAttribute("type", "text/javascript");
+
+                if (window.innerWidth > 767) {
+                    scriptElement.setAttribute("src", "desktop-script.js");
+                    document.getElementById("desktop-script").appendChild(scriptElement);
+                } else {
+                    scriptElement.setAttribute("src", "mobile-script.js");
+                    document.getElementById("mobile-script").appendChild(scriptElement);
+                }
+            }
+            window.addEventListener("load", loadScript);
+            window.addEventListener("resize", loadScript);
+        </script> -->
+
         <script src="index.js"></script>
+
     </body>
 </html>
