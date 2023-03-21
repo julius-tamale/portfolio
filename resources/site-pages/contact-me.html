@@ -5,11 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Julius Tamale | Front-end Web Developer</title>
-        <link rel="stylesheet" media="screen and (max-width: 1023px)" href="index.css">
-        <!-- <link rel="stylesheet" media="screen and (max-width: 767px) and (max-width: 1023px)" href="resources/css/style2.css"> -->
-        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="/index2.css">
-        <script id="desktop-script" src=""></script>
-        <script id="mobile-script" src=""></script>
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="../css-files/mobile-styles.css">
+        <link rel="stylesheet" media="screen and (min-width: 767px)" href="../css-files/desktop-styles.css">
+        <script src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -29,16 +28,78 @@
                 <div class="main">
                     <div class="hero-bg">
                         <div class="overlay">
-                            <h2 class="title">Future is here</h2>
-                            <p class="description">
-                                I'm a frontend web developer with a passion for 
-                                creating beautiful and functional websites.
-                                Browse my portfolio to see examples of my 
-                                work and previous projects.
-                                If you have any questions or are interested in 
-                                working together, click the contact button below.
-                            </p>
-                            <a href="#" class="btn">Contact Me</a>
+                            <div class="form-wrapper">
+                                <span class="big-circle"></span>
+                                <img src="img/shape.png" class="square" alt="" />
+                                <div class="form">
+                                    <div class="contact-info">
+                                        <h3 class="title">Let's get in touch</h3>
+                                        <p class="text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                                            dolorum adipisci recusandae praesentium dicta!
+                                        </p>
+                                        <div class="info">
+                                            <div class="information">
+                                                <img src="img/location.png" class="icon" alt="" />
+                                                <p>92 Cherry Drive Uniondale, NY 11553</p>
+                                            </div>
+                                            <div class="information">
+                                                <img src="img/email.png" class="icon" alt="" />
+                                                <p>juliotamex@proton.me</p>
+                                            </div>
+                                            <div class="information">
+                                                <img src="img/phone.png" class="icon" alt="" />
+                                                <p>+256-784-076-667</p>
+                                            </div>
+                                        </div>
+                                        <div class="social-media">
+                                            <p>Connect with me :</p>
+                                            <div class="social-icons">
+                                                <a href="https://www.linkedin.com/in/tamale-julius/">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                                <a href="https://twitter.com/tjewlius" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                                <a href="https://github.com/julius-tamale">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-form">
+                                        <span class="circle one"></span>
+                                        <span class="circle two"></span>
+                                        <form action="index.html" autocomplete="off">
+                                            <h3 class="title">Contact me</h3>
+                                            <div class="input-container">
+                                                <input type="text" name="name" class="input" />
+                                                <label for="">Username</label>
+                                                <span>Username</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <input type="email" name="email" class="input" />
+                                                <label for="">Email</label>
+                                                <span>Email</span>
+                                            </div>
+                                            <div class="input-container">
+                                                <input type="tel" name="phone" class="input" />
+                                                <label for="">Phone</label>
+                                                <span>Phone</span>
+                                            </div>
+                                            <div class="input-container textarea">
+                                                <textarea name="message" class="input"></textarea>
+                                                <label for="">Message</label>
+                                                <span>Message</span>
+                                            </div>
+                                            <input type="submit" value="Send" class="form-btn" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,7 +115,7 @@
                     <li>
                         <a href="about-me.html" style="--i: 0.1s">About</a>
                     </li>
-                    <li class="active">
+                    <li class="activated">
                         <a href="contact-me.html" style="--i: 0.15s">Contact</a>
                     </li>
                     <li>
@@ -68,21 +129,7 @@
 
         </div>
 
-        <script>
-            function loadScript() {
-                let scriptElement = document.createElement("script");
-                scriptElement.setAttribute("type", "text/javascript");
-
-                if (window.innerWidth > 1023) {
-                    scriptElement.setAttribute("src", "/desktop-script.js");
-                    document.getElementById("desktop-script").appendChild(scriptElement);
-                } else {
-                    scriptElement.setAttribute("src", "/mobile-script.js");
-                    document.getElementById("mobile-script").appendChild(scriptElement);
-                }
-            }
-            window.addEventListener("load", loadScript);
-            window.addEventListener("resize", loadScript);
-        </script>
+        <script src="/index.js"></script>
+        <script src="/script.js"></script>
     </body>
 </html>

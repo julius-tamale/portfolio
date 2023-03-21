@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Julius Tamale | Front-end Web Developer</title>
-        <link rel="stylesheet" media="screen and (max-width: 767px)" href="index.css">
-        <link rel="stylesheet" media="screen and (min-width: 767px)" href="index2.css">
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="resources/css-files/mobile-styles.css">
+        <link rel="stylesheet" media="screen and (min-width: 767px)" href="resources/css-files/desktop-styles.css">
         <script id="desktop-script" src=""></script>
         <script id="mobile-script" src=""></script>
 
@@ -48,7 +48,7 @@
     
             <nav class="links">
                 <ul>
-                    <li class="active nav-link">
+                    <li class="activated nav-link">
                         <a href="index.html" style="--i: 0.05s">Home</a>
                     </li>
                     <li class="nav-link">
@@ -68,29 +68,6 @@
 
         </div>
 
-
-
-
-
-
-        <!-- <script>
-            function loadScript() {
-                let scriptElement = document.createElement("script");
-                scriptElement.setAttribute("type", "text/javascript");
-
-                if (window.innerWidth > 767) {
-                    scriptElement.setAttribute("src", "desktop-script.js");
-                    document.getElementById("desktop-script").appendChild(scriptElement);
-                } else {
-                    scriptElement.setAttribute("src", "mobile-script.js");
-                    document.getElementById("mobile-script").appendChild(scriptElement);
-                }
-            }
-            window.addEventListener("load", loadScript);
-            window.addEventListener("resize", loadScript);
-        </script> -->
-
         <script src="index.js"></script>
-
     </body>
 </html>

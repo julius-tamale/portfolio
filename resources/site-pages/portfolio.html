@@ -5,11 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Julius Tamale | Front-end Web Developer</title>
-        <link rel="stylesheet" media="screen and (max-width: 1023px)" href="index.css">
-        <!-- <link rel="stylesheet" media="screen and (max-width: 767px) and (max-width: 1023px)" href="resources/css/style2.css"> -->
-        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="/index2.css">
-        <script id="desktop-script" src=""></script>
-        <script id="mobile-script" src=""></script>
+        <link rel="stylesheet" media="screen and (max-width: 767px)" href="/index.css">
+        <link rel="stylesheet" media="screen and (min-width: 767px)" href="/index2.css">
     </head>
 
     <body>
@@ -57,7 +54,7 @@
                     <li>
                         <a href="contact-me.html" style="--i: 0.15s">Contact</a>
                     </li>
-                    <li class="active">
+                    <li class="activated">
                         <a href="portfolio.html" style="--i: 0.25s">Portfolio</a>
                     </li>
                     <li>
@@ -68,21 +65,6 @@
 
         </div>
 
-        <script>
-            function loadScript() {
-                let scriptElement = document.createElement("script");
-                scriptElement.setAttribute("type", "text/javascript");
-
-                if (window.innerWidth > 1023) {
-                    scriptElement.setAttribute("src", "/desktop-script.js");
-                    document.getElementById("desktop-script").appendChild(scriptElement);
-                } else {
-                    scriptElement.setAttribute("src", "/mobile-script.js");
-                    document.getElementById("mobile-script").appendChild(scriptElement);
-                }
-            }
-            window.addEventListener("load", loadScript);
-            window.addEventListener("resize", loadScript);
-        </script>
+        <script src="/index.js"></script>
     </body>
 </html>
