@@ -336,7 +336,7 @@ ul li.activated a {
 
 
 /* form styles start */
-input,
+/* input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
@@ -350,7 +350,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
   
   .form {
     width: 100%;
@@ -363,10 +363,10 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .contact-form {
+  /* .contact-form {
     background-color: #1abc9c;
     position: relative;
-  }
+  } */
   
   .circle {
     border-radius: 50%;
@@ -374,7 +374,7 @@ textarea {
     position: absolute;
   }
   
-  .circle.one {
+  /* .circle.one {
     width: 130px;
     height: 130px;
     top: 130px;
@@ -386,7 +386,7 @@ textarea {
     height: 80px;
     top: 10px;
     right: 30px;
-  }
+  } */
   
   .contact-form:before {
     content: "";
@@ -525,10 +525,10 @@ textarea {
     opacity: 1;
   }
   
-  .contact-info {
+  /* .contact-info {
     padding: 2.3rem 2.2rem;
     position: relative;
-  }
+  } */
   
   .contact-info .title {
     color: #1abc9c;
