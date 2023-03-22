@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Julius Tamale | Front-end Web Developer</title>
-        <link rel="stylesheet" media="screen and (max-width: 767px)" href="../css-files/mobile-styles.css">
-        <link rel="stylesheet" media="screen and (min-width: 767px)" href="../css-files/desktop-styles.css">
-        <script src="https://kit.fontawesome.com/64d58efce2.js"
-        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/index.css">
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -70,25 +71,26 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="contact-form">
                                         <span class="circle one"></span>
                                         <span class="circle two"></span>
                                         <form action="index.html" autocomplete="off">
                                             <h3 class="title">Contact me</h3>
                                             <div class="input-container">
-                                                <input type="text" name="name" class="input" />
-                                                <label for="">Username</label>
+                                                <input type="text" name="name" class="input" id="username" required/>
+                                                <label for="username">Username</label>
                                                 <span>Username</span>
                                             </div>
                                             <div class="input-container">
-                                                <input type="email" name="email" class="input" />
-                                                <label for="">Email</label>
-                                                <span>Email</span>
+                                                <input type="text" name="phone" class="input" id="subject"/>
+                                                <label for="">Subject</label>
+                                                <span>Subject</span>
                                             </div>
                                             <div class="input-container">
-                                                <input type="tel" name="phone" class="input" />
-                                                <label for="">Phone</label>
-                                                <span>Phone</span>
+                                                <input type="email" name="email" class="input" required/>
+                                                <label for="">Email</label>
+                                                <span>Email</span>
                                             </div>
                                             <div class="input-container textarea">
                                                 <textarea name="message" class="input"></textarea>

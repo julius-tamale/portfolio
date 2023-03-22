@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800;900&display=swap');
 
 * {
     padding:0;
@@ -6,21 +6,21 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: 'Recursive', sans-serif;
     overflow: hidden;
-}
+} */
 
-.container {
+/* .container {
     max-height: 100vh;
     width: 100%;
     background-color: #131414;
     background-image: linear-gradient(135deg, #131414 0%, #000000 100%);
     transform-style: preserve-3d;
     overflow: hidden;
-}
+} */
 
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -93,13 +93,13 @@ body {
 
 .bar::after {
     transform: translateY(9px);
-}
+} */
 
 .main-container {
     overflow: hidden;
 }
 
-.main {
+/* .main {
     position: relative;
     width: 100%;
     left: 0;
@@ -129,7 +129,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: #fff;
-}
+} */
 
 .inner {
     max-width: 35rem;
@@ -149,7 +149,7 @@ body {
     font-size: 1.5rem;
 }
 
-.btn {
+/* .btn {
     margin-top: 1rem;
     padding: 0.6rem 1.8rem;
     background-color: #e20f2f;
@@ -159,9 +159,9 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-}
+} */
 
-.container.active .bar {
+/* .container.active .bar {
     transform: rotate(360deg);
     background-color: transparent;
 }
@@ -179,9 +179,9 @@ body {
     cursor: pointer;
     transform: perspective(1300px) rotateY(20deg) translateY(10px) 
                 translateZ(310px) scale(0.5);
-}
+} */
 
-@keyframes main-animation {
+/* @keyframes main-animation {
     from {
         transform: translate(0);
     }
@@ -203,10 +203,6 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin-left: 10px;
-}
-
-ul { 
-    list-style: none;
 }
 
 ul li.activated a {
@@ -334,8 +330,7 @@ ul li.activated a {
 .container.active .main:hover {
     transform: perspective(1300px) rotateY(20deg) translateY(10px) 
                 translateZ(340px) scale(0.5);
-}
-
+} */
 
 
 
