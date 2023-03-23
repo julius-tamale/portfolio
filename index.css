@@ -49,7 +49,7 @@ li {
 
 /* mobile styles start */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
     /* ============ navigation menu start ============ */
     .hamburger-menu {
         display: none;
