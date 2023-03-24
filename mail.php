@@ -1,26 +1,52 @@
 <?php
-if(isset($_POST['submit'])) {
-    // Sanitize input data to prevent SQL injection and other security issues
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate user inputs to prevent email injection attacks
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
     
-    // Validate email address to ensure it's in the correct format
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = "Please enter a valid email address.";
+    // Check if required fields are empty
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "Please fill out all required fields.";
+        exit;
     }
-    
-    // Send email if no errors were found
-    if(empty($error)) {
-        $recipient = 'juliotamex@proton.me';
-        $mailheader = "From: $name <$email>\r\n";
-        
-        if(mail($recipient, $subject, $message, $mailheader)) {
-            $success = "Thank you for your message, $name! We'll get back to you as soon as possible.";
-        } else {
-            $error = "There was an error sending your message. Please try again.";
-        }
+
+    // Check if email is valid
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Please enter a valid email address.";
+        exit;
     }
+
+    // Set email headers
+    $to = "tjewlius@gmail.com";
+    $headers = array();
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-type: text/plain; charset=UTF-8";
+    $headers[] = "From: $name <$email>";
+    $headers[] = "Reply-To: $name <$email>";
+
+    // Send email using PHPMailer library
+    require_once 'resources/PHPMailer-master/to/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->Username = 'tjewlius@gmail.com';
+    $mail->Password = 'your_email_password';
+    $mail->setFrom($email, $name);
+    $mail->addAddress($to);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    if (!$mail->send()) {
+        echo "There was an error sending your message. Please try again later.";
+        exit;
+    }
+
+    echo "Thank you for your message. I'll be in touch shortly!";
 }
 ?>

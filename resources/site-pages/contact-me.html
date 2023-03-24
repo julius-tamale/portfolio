@@ -81,7 +81,7 @@
                                         <span class="circle one"></span>
                                         <span class="circle two"></span>
 
-                                        <form method="POST" action="/mail.php" autocomplete="off">
+                                        <form method="GET" action="/mail.php" autocomplete="off">
                                             <h3 class="title">Contact me</h3>
                                             <div class="input-container">
                                                 <input type="text" name="name" class="input" id="username" required/>
@@ -104,13 +104,6 @@
                                                 <span>Message</span>
                                             </div>
 
-                                            <?php if(!empty($error)): ?>
-                                            <p class="error"><?php echo $error; ?></p>
-                                            <?php endif; ?>
-                                            
-                                            <?php if(!empty($success)): ?>
-                                                <p class="success"><?php echo $success; ?></p>
-                                            <?php endif; ?>
                                             <input type="submit" value="Send" class="form-btn" />
                                         </form>
                                     </div>
